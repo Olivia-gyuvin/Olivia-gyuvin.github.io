@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- 文档类型声明 - HTML5标准 -->
+<html lang="zh-CN">
+<head>
+  <!-- 头部信息 - 页面元数据和资源引用 -->
+  <meta charset="UTF-8"> <!-- 字符编码设置 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式设计设置 -->
+  <title>藏语直播助手 - 测试</title> <!-- 页面标题 -->
+  
+  <!-- 外部CDN资源引用 -->
+  <!-- Tailwind CSS - 用于快速构建UI组件 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome - 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- Chart.js - 数据可视化库 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+  
+  <!-- 自定义样式表 - 包含抖音式黑白主题和组件样式 -->
+  <link rel="stylesheet" href="./styles.css">
+  
+  <!-- 【预留位置】- 后期可添加自定义Tailwind配置 -->
+  <!-- <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // 可在此处添加自定义颜色
+          },
+        },
+      }
+    }
+  </script> -->
+</head>
+<body>
+  <!-- 页面主体内容 -->
+  <!-- 测试内容区域容器 -->
+  <div class="container mx-auto px-4 py-8">
+    <!-- 页面标题区域 -->
+    <h1 class="text-2xl font-bold mb-6">藏语直播助手APP测试</h1>
+    
+    <!-- 【可插入位置】- 可在此处添加应用logo图片 -->
+    <!-- <div class="flex justify-center mb-6">
+      <img src="path/to/logo.png" alt="藏语直播助手logo" class="w-24 h-24">
+    </div> -->
+    
+    <!-- 测试说明卡片 -->
+    <div class="card mb-6">
+      <h2 class="text-xl font-semibold mb-4">测试说明</h2>
+      
+      <!-- 【预留位置】- 后期可添加测试流程图或说明图片 -->
+      <!-- <div class="flex justify-center mb-4">
+        <img src="path/to/test-flow.png" alt="测试流程" class="max-w-full h-auto rounded-lg">
+      </div> -->
+      
+      <p class="text-gray-300 mb-4">点击下方按钮启动应用，体验藏语直播助手的各项功能。</p>
+      <p class="text-gray-300">首次启动时，您将看到注册/登录页面。您可以使用模拟账号进行测试：</p>
+      
+      <!-- 测试账号信息 -->
+      <ul class="list-disc list-inside text-gray-300 ml-4 mt-2">
+        <li>用户名: test123</li>
+        <li>密码: test123</li>
+      </ul>
+      
+      <!-- 【预留位置】- 可添加更多测试信息或注意事项 -->
+      <!-- <div class="mt-4 p-3 bg-yellow-900/30 border border-yellow-700 rounded-md">
+        <p class="text-yellow-300 text-sm">注意事项：测试账号仅供演示使用，请勿在生产环境中使用。</p>
+      </div> -->
+    </div>
+    
+    <!-- 操作按钮卡片 -->
+    <div class="card">
+      <!-- 启动应用按钮 - 主操作 -->
+      <button id="startApp" class="btn btn-primary w-full py-3 rounded-lg font-medium">
+        <!-- 【修改提示】- 可根据需要更改按钮文字或图标 -->
+        <!-- <i class="fa fa-play-circle mr-2"></i> -->
+        启动应用
+      </button>
+      
+      <!-- 备用访问方式 -->
+      <div class="text-center mt-4 text-gray-400 text-sm">
+        <p>或直接访问 <a href="./index.html" class="text-blue-400 hover:underline">index.html</a></p>
+      </div>
+      
+      <!-- 【预留位置】- 可添加其他快捷访问选项 -->
+      <!-- <div class="grid grid-cols-2 gap-3 mt-4">
+        <button class="btn btn-outline py-2 text-sm">
+          <i class="fa fa-code mr-1"></i> 查看代码
+        </button>
+        <button class="btn btn-outline py-2 text-sm">
+          <i class="fa fa-book mr-1"></i> 阅读文档
+        </button>
+      </div> -->
+    </div>
+    
+    <!-- 【预留位置】- 可添加功能介绍或更新日志 -->
+    <!-- <div class="card mt-6">
+      <h3 class="text-lg font-semibold mb-3">最近更新</h3>
+      <ul class="text-sm text-gray-300 space-y-2">
+        <li><i class="fa fa-check-circle text-green-400 mr-2"></i>修复AI话术组件引用错误</li>
+        <li><i class="fa fa-check-circle text-green-400 mr-2"></i>优化抖音式黑白配色主题</li>
+      </ul>
+    </div> -->
+  </div>
+
+  <!-- JavaScript交互逻辑 -->
+  <script>
+    // 启动应用按钮事件监听器
+    document.getElementById('startApp').addEventListener('click', function() {
+      // 【修改提示】- 后期可添加页面切换前的确认提示或加载动画
+      // showLoadingAnimation(); // 显示加载动画
+      
+      // 跳转到主应用页面
+      window.location.href = './index.html';
+    });
+    
+    // 【预留位置】- 后期可添加更多交互逻辑
+    // 例如：实时检测文件是否存在、环境检查、版本信息显示等
+    /*
+    // 页面加载完成后执行的初始化操作
+    window.addEventListener('load', function() {
+      // 检查必要文件是否存在
+      checkRequiredFiles();
+      
+      // 显示版本信息
+      displayVersionInfo();
+    });
+    
+    function checkRequiredFiles() {
+      // 实现文件检查逻辑
+    }
+    
+    function displayVersionInfo() {
+      // 显示版本信息
+    }
+    */
+  </script>
+</body>
+</html>
