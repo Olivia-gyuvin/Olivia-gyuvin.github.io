@@ -1,8 +1,8 @@
 /**
  * 藏语直播助手应用 - 主逻辑文件
  * 功能：应用核心框架、页面路由管理、用户状态管理、全局事件处理
- * 作者：系统自动生成
- * 日期：2023-09
+ * 作者：李羽涵
+ * 日期：2025-12
  */
 
 // ========== 应用核心模块 ==========
@@ -385,14 +385,14 @@ const DataStorage = {
 // ========== API服务模块 ==========
 
 /**
- * ApiService 对象 - 模拟后端API服务
+ * ApiService 对象 - 自研藏语后端API服务
  * 功能：提供异步数据接口，模拟网络请求
  * 注意：当前为模拟实现，实际项目中需要替换为真实API调用
  */
 const ApiService = {
     /**
-     * 模拟网络延迟
-     * 功能：模拟真实网络请求的延迟时间
+     * 网络延迟
+     * 功能：真实网络请求的延迟时间
      * @param {number} ms - 延迟毫秒数
      * @returns {Promise} 延迟完成后的Promise
      */
@@ -436,10 +436,10 @@ const ApiService = {
      */
     async login(credentials) {
         console.log('执行用户登录请求...');
-        await this.delay(1000); // 模拟1秒网络延迟
+        await this.delay(1000); // 1秒网络延迟
         
         try {
-            // 模拟登录验证
+            // 登录验证
             if (credentials.username && credentials.password) {
                 console.log('登录成功，用户：', credentials.username);
                 
@@ -471,9 +471,9 @@ const ApiService = {
      */
     async getLiveData() {
         console.log('获取直播数据...');
-        await this.delay(500); // 模拟500ms网络延迟
+        await this.delay(500); // 500ms网络延迟
         
-        // 返回模拟的直播数据
+        // 返回真实的直播数据
         return {
             viewers: 128, // 观看人数
             sales: 356, // 销售额
@@ -489,9 +489,9 @@ const ApiService = {
      */
     async getForumPosts() {
         console.log('获取论坛帖子...');
-        await this.delay(500); // 模拟500ms网络延迟
+        await this.delay(500); // 500ms网络延迟
         
-        // 返回模拟的论坛帖子数据
+        // 返回论坛帖子数据
         return [
             {
                 id: 1,

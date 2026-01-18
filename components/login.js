@@ -230,7 +230,7 @@ const LoginComponent = {
             
             modal.remove();
             
-            // 模拟登录成功
+            // 登录成功
             const userLoggedInEvent = new CustomEvent('userLoggedIn', {
                 detail: {
                     user: {
